@@ -19,9 +19,14 @@ $$
 -------
 The state variables are x, y and z. The rate at which states are changing is denoted by dx/dt, dy/dt and dz/dt respectively. The constants σ, ρ and β are the physical parameters.
 
-***A chaotic system***: The Lorenz system is a classic example of a deterministic chaotic system, meaning its behavior is not random but extremely sensitive to its starting point.The ***butterfly effect***: This sensitivity to initial conditions is the origin of the term "butterfly effect," the idea that a butterfly flapping its wings in one place could, over time, influence weather patterns elsewhere.
+***A chaotic system***: The Lorenz system is a classic example of a deterministic chaotic system, meaning its behavior is not random but extremely sensitive to its starting point.
+
+***The butterfly effect***: This sensitivity to initial conditions is the origin of the term "butterfly effect," the idea that a butterfly flapping its wings in one place could, over time, influence weather patterns elsewhere.
+
 ***The butterfly shape***: The "attractor" part of the name refers to the fact that while the paths of the solutions are chaotic, they remain confined to a specific, bounded region of space, creating the iconic butterfly or figure-eight shape.
-***How it works***: The system is defined by three equations for the rate of change of variables (\(x\), \(y\), and \(z\)) over time. For certain parameter values, the variables oscillate, with the path jumping from one "lobe" of the butterfly to the other in a complex, but bounded, pattern.
+
+***How it works***: The system is defined by three equations for the rate of change of variables (x, y, and z) over time. For certain parameter values, the variables oscillate, with the path jumping from one "lobe" of the butterfly to the other in a complex, but bounded, pattern.
+
 ***Applications***: Originally designed to model weather, the Lorenz attractor is now a foundational concept in chaos theory and is used to study chaotic behavior in various scientific fields. 
 
 
@@ -30,12 +35,15 @@ The [Runge-Kutta](https://en.wikipedia.org/wiki/Runge%E2%80%93Kutta_methods) met
 
 ## ❄️ How it works 
 _**Approximates the slope**_: Instead of a single slope, it calculates four different slopes over a step:
-* \(k_{1}\): The slope at the beginning of the interval.
-* \(k_{2}\): The slope at the midpoint, using \(k_{1}\) to estimate the value at the midpoint.
-* \(k_{3}\): The slope at the midpoint, using \(k_{2}\) to estimate the value at the midpoint.
-* \(k_{4}\): The slope at the end of the interval.
-_**Creates a weighted average**_: It combines these four slopes into a weighted average to find a more accurate estimate of the next value. For the RK4 method, this is a specific weighted average: \(\frac{1}{6}(k_{1}+2k_{2}+2k_{3}+k_{4})\).
-_**Moves to the next step**_: This weighted average is then used to find the value of the next step, \(y_{n+1}\).
+
+* `k₁`: The slope at the beginning of the interval.
+* `k₂`: The slope at the midpoint, using `k₁` to estimate the value at the midpoint.
+* `k₃`: The slope at the midpoint, using `k₂` to estimate the value at the midpoint.
+* `k₄`: The slope at the end of the interval.
+  
+_**Creates a weighted average**_: It combines these four slopes into a weighted average to find a more accurate estimate of the next value. For the RK4 method, this is a specific weighted average:   **1/6 (k₁ + 2k₂ + 2k₃ + k₄)**.
+
+_**Moves to the next step**_: This weighted average is then used to find the value of the next step, yₙ₊₁.
 
 ### Slopes used by the classical Runge-Kutta method
 <img width="330" height="330" alt="Image" src="https://github.com/user-attachments/assets/2caf395b-350d-4d49-a0f7-badac5cda434" />
@@ -84,7 +92,7 @@ _**Moves to the next step**_: This weighted average is then used to find the val
   python3 Lorenz_3D.py
 ```
 ------
-### Output-geenrated
+### Output-generated
 <img width="600" height="500" alt="Image" src="https://github.com/user-attachments/assets/603d5836-9b88-4c2e-853d-d57b45a95ba1" />
 
 -------
@@ -92,7 +100,7 @@ _**Moves to the next step**_: This weighted average is then used to find the val
   python3 Lorenz_RK_Animated.py
 ```
 -------
- ### Output-geenrated
+ ### Output-generated
 ![Image](https://github.com/user-attachments/assets/7bc335c8-6e56-4b73-854b-890ea62abe7b)
 
 # 🐛 Bug Reporting
