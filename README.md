@@ -29,6 +29,7 @@ The state variables are x, y and z. The rate at which states are changing is den
 
 ***Applications***: Originally designed to model weather, the Lorenz attractor is now a foundational concept in chaos theory and is used to study chaotic behavior in various scientific fields. 
 
+In addition to this, I have also simulated [Rabinovich Fabrikant](https://en.wikipedia.org/wiki/Rabinovich%E2%80%93Fabrikant_equations) Attractor using RK4 method as well. 
 
 # 📒 Runge-Kutta Method
 The [Runge-Kutta](https://en.wikipedia.org/wiki/Runge%E2%80%93Kutta_methods) method is a family of numerical methods for solving initial-value problems for ordinary differential equations (ODEs). It is more accurate than simpler methods like Euler's method because it calculates multiple weighted slopes within each step instead of just one. The most common version, the fourth-order Runge-Kutta method (RK4), uses four slopes to get a very good approximation of the next value without needing high-order derivatives. 
@@ -102,6 +103,14 @@ _**Moves to the next step**_: This weighted average is then used to find the val
 -------
  ### Output-generated
 ![Image](https://github.com/user-attachments/assets/7bc335c8-6e56-4b73-854b-890ea62abe7b)
+
+-------
+```bash
+  python3 Rabinovich_Fabrikant_Animated.py
+```
+-------
+ ### Output-generated
+![Image](https://github.com/user-attachments/assets/d2943702-652a-4e40-8f99-fec87fac65a7)
 
 # 🐛 Bug Reporting
 Feel free to [open an issue](https://github.com/deep0505sharma/Lorenz-Attractor/issues) on GitHub if you find bugs.
